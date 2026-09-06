@@ -54,6 +54,11 @@ verbatim. All hyper-parameters follow the released configuration and are documen
 
 ## Reproducing the paper
 
+The experiments were run with PyTorch 2.6.0 (CUDA 12.4 build), scikit-learn 1.9.0,
+NumPy 2.4.4 and SciPy 1.17.1 on Windows; `requirements.txt` records the pinned versions
+and how to obtain the CUDA build. Matplotlib is needed only by `figs/make_figures.py`
+and is not part of the experiment environment.
+
 ```
 pip install -r requirements.txt
 
