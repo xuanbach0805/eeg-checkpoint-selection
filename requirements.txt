@@ -1,9 +1,20 @@
-# Phien ban da xac nhan tren may chay phan tich:
-numpy==2.2.6
-scipy==1.15.3
-matplotlib==3.10.9
+# Moi truong da chay cac thi nghiem trong bai:
+#   Windows, Python env tai  C:\Users\xuanbach0805\.platformio\penv
+#   GPU: build CUDA 12.4 cua PyTorch
 
-# CAN GHIM DUNG PHIEN BAN: chay `pip show torch scikit-learn` tren may da huan luyen
-# (may Windows co GPU) roi thay hai dong duoi bang so thuc te.
-torch>=2.0
-scikit-learn>=1.3
+torch==2.6.0
+scikit-learn==1.9.0
+numpy==2.4.4
+scipy==1.17.1
+
+# Ghi chu ve torch: ban thuc te da dung la 2.6.0+cu124. Hau to "+cu124" la dinh danh
+# phien ban cuc bo, `pip install` tu PyPI thuong se KHONG giai duoc. De lay dung ban
+# CUDA 12.4:
+#     pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+# Ban CPU thuan (torch==2.6.0 tu PyPI) tai lap duoc moi con so, chi cham hon nhieu.
+
+# --- Chi can cho figs/make_figures.py, KHONG can cho bat ky thi nghiem nao ---
+# matplotlib khong co trong moi truong da huan luyen o tren; cac hinh duoc sinh
+# rieng. Bat ky ban 3.8 tro len deu chay duoc make_figures.py.
+matplotlib>=3.8
+
