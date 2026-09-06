@@ -1,0 +1,9 @@
+# Phien ban da xac nhan tren may chay phan tich:
+numpy==2.2.6
+scipy==1.15.3
+matplotlib==3.10.9
+
+# CAN GHIM DUNG PHIEN BAN: chay `pip show torch scikit-learn` tren may da huan luyen
+# (may Windows co GPU) roi thay hai dong duoi bang so thuc te.
+torch>=2.0
+scikit-learn>=1.3

@@ -1,0 +1,6 @@
+device,family,config,channels,DIM,WBITS,XBITS,ACCW,weight_bytes,logic_elements,LE_pct,registers,memory_bits,mem_pct,mult_9bit,mult_pct,Fmax_MHz,latency_cycles,latency_ns,windows_per_s
+EP3C16F484C6,"Cyclone III",C1_1ch_w2,1,5,2,10,16,3.75,180,1.17,106,0,0.0,0,0.0,152.14,9,59.2,16904444
+EP3C16F484C6,"Cyclone III",C2_4ch_w4,4,20,4,10,18,30,352,2.28,99,200,0.039,0,0.0,103.28,24,232.4,4303333
+EP3C16F484C6,"Cyclone III",C3_8ch_w6,8,40,6,10,21,90,262,1.7,111,400,0.078,6,2.68,92.72,44,474.5,2107273
+EP3C16F484C6,"Cyclone III",C4_32ch_w6,32,160,6,10,23,360,461,2.99,123,1600,0.31,6,2.68,91.73,164,1787.9,559329
+EP3C16F484C6,"Cyclone III",C5_62ch_w8,62,310,8,10,26,930,930,6.04,135,3100,0.601,6,2.68,91.61,314,3427.6,291752

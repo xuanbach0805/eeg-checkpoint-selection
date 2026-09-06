@@ -1,0 +1,40 @@
+=== Kiem don dieu theo bit (dung sai 0.5) ===
+      row_max: 62
+   tensor_max: KHONG CO - sach
+     row_p999: 62
+      row_p99: 32, 62
+      row_mse: KHONG CO - sach
+
+=== Bien do giua 5 quantizer (diem) ===
+  ch       2       3       4       6       8
+   1    2.50    2.74    0.21    0.17    0.10
+   2    3.16    2.09    0.22    0.02    0.04
+   4    6.46    2.29    0.68    0.15    0.13
+   8    5.75    2.54    1.89    0.07    0.06
+  14    5.65    3.25    1.20    0.83    0.74
+  32    4.94    1.61    1.72    1.93    1.64
+  62    8.08    0.92    1.21    1.74    1.87
+
+=== Pareto GT-A + CI 95% (row_mse, n=15) ===
+    byte     acc              CI 95%  cau hinh                vs dinh (32ch@6b)
+     3.8   57.90   [53.30, 62.51]   1 kenh @ 2 bit         -5.53, p=0.007
+     5.6   58.37   [53.97, 62.77]   1 kenh @ 3 bit         -5.07, p=0.010
+     7.5   58.47   [53.87, 63.06]   1 kenh @ 4 bit         -4.97, p=0.010
+    11.2   60.50   [57.26, 63.75]   2 kenh @ 3 bit         -2.93, p=0.055
+    15.0   60.53   [58.23, 62.84]   4 kenh @ 2 bit         -2.90, p=0.095
+    22.5   60.54   [57.44, 63.64]   4 kenh @ 3 bit         -2.89, p=0.048
+    30.0   62.06   [59.02, 65.10]   4 kenh @ 4 bit         -1.38, p=0.489
+    60.0   62.38   [59.61, 65.16]   8 kenh @ 4 bit         -1.05, p=0.639
+    90.0   63.10   [60.28, 65.92]   8 kenh @ 6 bit         -0.34, p=0.890
+   210.0   63.28   [60.69, 65.86]   14 kenh @ 8 bit        -0.16, p=0.847
+   360.0   63.44   [60.03, 66.84]   32 kenh @ 6 bit        — (chinh no)
+
+=== Kiem dinh chinh tren GT-A ===
+  1 kenh @2 bit (3.75 B)      57.90  CI[53.30,62.51]  hon majority +23.43
+  4 kenh @4 bit (30 B)        62.06  CI[59.02,65.10]  hon majority +27.59
+  32 kenh @6 bit (360 B)      63.44  CI[60.03,66.84]  hon majority +28.97
+  62 kenh float (3720 B)      62.87  CI[58.82,66.91]  hon majority +28.40
+
+  1ch@2b       vs 32ch@6b      -5.53 diem  p=0.0067  (thang 3/15)
+  4ch@4b       vs 32ch@6b      -1.38 diem  p=0.4887  (thang 7/15)
+  62ch float   vs 32ch@6b      -0.57 diem  p=0.5245  (thang 7/15)
